@@ -1,0 +1,463 @@
+﻿/* Reset & Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #22252c;
+    color: #c0b3a0;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #3f3250;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color: #c0b3a0;
+    text-decoration: none;
+    padding: 10px 14px;
+    font-size: 16px;
+    margin-right: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+    .navbar a:hover {
+        background-color: #e14658;
+        color: #fff;
+    }
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .navbar-right {
+    gap: 10px;
+}
+
+.navbar-right a {
+    display: block;
+    padding: 8px 12px;
+    background-color: #444;
+    border-radius: 4px;
+}
+
+/* Headings */
+h2 {
+    color: #e14658;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Container */
+.container, .content-placeholder {
+    padding: 30px 20px;
+    background-color: #22252c;
+    border-radius: 8px;
+}
+
+.content-placeholder {
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Form Container */
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: #f5f8fc;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Inputs */
+.inputbox {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #3f3250;
+    margin-top: 5px;
+}
+
+    .inputbox:focus {
+        border-color: #e14658;
+        background-color: #f0f4f8;
+        outline: none;
+    }
+
+/* Submit Button */
+.submit-button {
+    display: inline-block;
+    background-color: #e14658;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: auto;
+    margin-top: 10px;
+}
+
+    .submit-button:hover {
+        background-color: #3f3250;
+        color: white;
+    }
+
+/* Table Styling */
+td {
+    padding: 12px;
+    color: #3f3250;
+    font-weight: bold;
+}
+
+/* Validation Message */
+.error-message {
+    font-size: 13px;
+    margin-top: 5px;
+    color: red;
+}
+
+/* Footer */
+footer {
+    background-color: #3f3250;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+    footer:hover {
+        background-color: #e14658;
+        color: #fff;
+    }
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    table, .register-table {
+        width: 100%;
+        display: block;
+    }
+
+    tr {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    td {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+
+    .filter-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button-group-vertical {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Card Component */
+.card {
+    background-color: #2f3340;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Banner */
+.banner {
+    padding: 60px 20px;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .banner h1 {
+        font-size: 36px;
+        color: #e14658;
+    }
+
+.certificate-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.certificate-card {
+    border: 5px double #000;
+    padding: 40px;
+    width: 80%;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+}
+
+.highlight {
+    font-weight: bold;
+    font-size: 24px;
+    color: #3f3250;
+}
+
+/* Volunteer Table Styling */
+.volunteer-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #f5f8fc;
+    color: #3f3250;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+    .volunteer-table th,
+    .volunteer-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    .volunteer-table th {
+        background-color: #e14658;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .volunteer-table tr:nth-child(even) {
+        background-color: #fff;
+    }
+
+    .volunteer-table tr:hover {
+        background-color: #f1e9ee;
+    }
+
+.success-message {
+    font-size: 13px;
+    margin-top: 5px;
+    color: limegreen;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #3f3250;
+    font-size: 16px;
+    margin-top: 5px;
+    transition: border 0.3s ease;
+}
+
+    .form-control:focus {
+        border-color: #e14658;
+        outline: none;
+        background-color: #f9f9f9;
+    }
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/*.message {
+    display: block;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}*/
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.certificate-preview {
+    background-color: #fff;
+    color: #000;
+    padding: 30px;
+    border: 5px double #000;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    width: 100%;
+}
+
+.form-container,
+.filter-content,
+.form-container * {
+    color: #222 !important;
+}
+
+    .form-container label,
+    .filter-content label,
+    .form-group label {
+        color: #222 !important;
+        font-weight: 600;
+    }
+
+    .form-container input::placeholder,
+    .filter-content input::placeholder,
+    .inputbox::placeholder,
+    .form-control::placeholder {
+        color: #888 !important;
+    }
+
+    .form-container input,
+    .form-container select,
+    .form-container textarea,
+    .filter-content input,
+    .filter-content select,
+    .filter-content textarea {
+        background-color: #fff !important;
+        color: #222 !important;
+        border: 1px solid #ccc;
+    }
+
+/* Layout styling */
+.message {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+/* Color override */
+.success-message {
+    color: green !important;
+}
+
+.error-message {
+    color: red !important;
+}
+/* ✅ Final Fix to make sure submit button is styled properly */
+.form-container .submit-button {
+    background-color: #e14658 !important;
+    color: #fff !important;
+}
+/* BrowseEvents Filter Section Layout */
+.filter-box {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.filter-content {
+    background-color: #f5f6fa;
+    padding: 25px 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.button-group-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Adjust buttons to prevent full width */
+.filter-content .submit-button {
+    background-color: #e14658 !important;
+    color: #fff !important;
+    font-weight: 600;
+}
+/* Make filter section input text darker for readability */
+.filter-content .inputbox,
+.filter-content input[type="text"],
+.filter-content select {
+    color: #333 !important; /* dark text */
+    background-color: #fff !important; /* white background */
+    border: 1px solid #ccc;
+}
+
+.filter-content label {
+    color: #3f3250 !important; /* consistent with your theme */
+}
+
+
